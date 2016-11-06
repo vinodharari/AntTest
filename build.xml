@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="warTarget" basedir=".">
-	<property name="tomcat" value="D:\apache-tomcat-7.0.56-windows-x64\apache-tomcat-7.0.56"/>
+	<property name="tomcat" value="/home/vharari/apache-tomcat-7.0.30"/>
 	<property name="tomcat.deployment" value="${tomcat}/webapps"/>
 	<property name="tomcat.bin" value="${tomcat}/bin"/>
 	<property name="base" value="."/>
@@ -16,9 +16,9 @@
 		<antcall target="startTomcat"/>
 	</target>
 	<target name="startTomcat">
-		<exec executable="${tomcat.bin}/startup.bat"/>
+		<exec executable="${tomcat.bin}/startup.sh"/>
 	</target>
 	<target name="stopTomcat">
-		<exec executable="${tomcat.bin}/shutdown.bat"/>
+		<exec executable="${tomcat.bin}/shutdown.sh"/>
 	</target>
 </project>
